@@ -2,51 +2,66 @@ import React from "react";
 
 export default function Portfolio() {
   return (
-    <div style={{ padding: "2rem", fontFamily: "Arial, sans-serif" }}>
-      <header style={{ textAlign: "center", marginBottom: "2rem" }}>
-        <h1 style={{ fontSize: "2.5rem", fontWeight: "bold" }}>Andrew's Portfolio</h1>
-        <p style={{ fontSize: "1.2rem", marginTop: "0.5rem" }}>Aspiring Software Engineer | CS Student</p>
+    <div className="font-sans text-gray-800">
+      <header className="bg-white shadow-sm py-6 text-center">
+        <h1 className="text-4xl font-bold">Leul</h1>
+        <p className="text-lg text-gray-600 mt-1">Aspiring Software Engineer • Computer Science Student</p>
       </header>
 
-      <section style={{ marginBottom: "2rem" }}>
-        <h2 style={{ fontSize: "1.8rem", fontWeight: "600", marginBottom: "1rem" }}>Projects</h2>
-        <div style={{ display: "grid", gap: "1rem" }}>
-          <div style={{ padding: "1rem", border: "1px solid #ccc", borderRadius: "10px" }}>
-            <h3 style={{ fontSize: "1.2rem", fontWeight: "bold" }}>Premier League Quiz Game</h3>
-            <p style={{ marginTop: "0.5rem" }}>A C-based terminal game where users answer trivia about Premier League history.</p>
-            <a href="https://github.com/yourgithub/premier-league-quiz" target="_blank" rel="noreferrer">View Code</a>
+      <main className="max-w-4xl mx-auto px-4 py-8">
+        {/* About Section */}
+        <section className="mb-12">
+          <h2 className="text-2xl font-semibold mb-4">About Me</h2>
+          <p className="text-gray-700 leading-relaxed">
+            I'm a second-year Computer Science student who enjoys learning by building. I’ve developed a strong foundation
+            in C, Java, and Python, and I’m currently mastering web development with React. My passion lies in solving
+            real-world problems through technology — from building fun quiz games to productivity tools. I'm seeking
+            opportunities to apply my skills through software engineering internships and grow as a developer.
+          </p>
+        </section>
+
+        {/* Projects Section */}
+        <section className="mb-12">
+          <h2 className="text-2xl font-semibold mb-4">Projects</h2>
+          <div className="grid gap-6">
+
+            <div className="bg-white shadow rounded-xl p-5">
+              <h3 className="text-xl font-bold">Premier League Quiz Game</h3>
+              <p className="mt-2 text-gray-700">
+                A terminal-based trivia game built entirely in C that challenges users with questions about Premier League football history.
+                I implemented structured input handling, a game loop, score tracking, and win/loss logic to create a smooth and engaging CLI experience.
+              </p>
+              <p className="mt-1 text-gray-600 text-sm">Built with: C • GCC Compiler • CLI Interface</p>
+              <a href="https://github.com/yourgithub/premier-league-quiz" className="text-blue-600 mt-2 inline-block">View Code</a>
+            </div>
+
+            <div className="bg-white shadow rounded-xl p-5">
+              <h3 className="text-xl font-bold">Study Timer App</h3>
+              <p className="mt-2 text-gray-700">
+                A simple timer app that helps students stay focused using the Pomodoro technique. Users can set session durations,
+                track completed study intervals, and receive alerts when breaks start. This project helped reinforce my knowledge of
+                time-based logic and React state management.
+              </p>
+              <p className="mt-1 text-gray-600 text-sm">Built with: React • JavaScript • CSS</p>
+              <a href="https://github.com/yourgithub/study-timer" className="text-blue-600 inline-block">View Code</a>
+            </div>
+
           </div>
+        </section>
 
-          <div style={{ padding: "1rem", border: "1px solid #ccc", borderRadius: "10px" }}>
-            <h3 style={{ fontSize: "1.2rem", fontWeight: "bold" }}>To-Do List App</h3>
-            <p style={{ marginTop: "0.5rem" }}>A full-stack MERN app that lets users create, update, and delete tasks.</p>
-            <a href="https://yourtodoapp.vercel.app" target="_blank" rel="noreferrer">Live Demo</a><br />
-            <a href="https://github.com/yourgithub/todo-app" target="_blank" rel="noreferrer">View Code</a>
-          </div>
-        </div>
-      </section>
+        {/* Contact Section */}
+        <section className="mb-12">
+          <h2 className="text-2xl font-semibold mb-4">Contact</h2>
+          <p className="text-gray-700">Email: <a href="Leul Ejigu" className="text-blue-700">andrew@example.com</a></p>
+          <p className="text-gray-700">GitHub: <a href="https://github.com/yourgithub" className="text-blue-700">github.com/yourgithub</a></p>
+          <p className="text-gray-700">LinkedIn: <a href="https://linkedin.com/in/yourlinkedin" className="text-blue-700">linkedin.com/in/yourlinkedin</a></p>
+        </section>
+      </main>
 
-      <section style={{ marginBottom: "2rem" }}>
-        <h2 style={{ fontSize: "1.8rem", fontWeight: "600", marginBottom: "1rem" }}>Blog</h2>
-        <ul>
-          <li><a href="#">How I Built My First C Game in College</a></li>
-          <li><a href="#">Tips for Learning Recursion and Linked Lists</a></li>
-        </ul>
-      </section>
-
-      <section style={{ marginBottom: "2rem" }}>
-        <h2 style={{ fontSize: "1.8rem", fontWeight: "600", marginBottom: "1rem" }}>Contact</h2>
-        <form>
-          <input type="text" placeholder="Your Name" style={{ padding: "0.5rem", marginBottom: "0.5rem", width: "100%" }} /><br />
-          <input type="email" placeholder="Your Email" style={{ padding: "0.5rem", marginBottom: "0.5rem", width: "100%" }} /><br />
-          <textarea placeholder="Your Message" rows="4" style={{ padding: "0.5rem", width: "100%" }}></textarea><br />
-          <button type="submit" style={{ padding: "0.5rem 1rem", backgroundColor: "#007bff", color: "#fff", border: "none", borderRadius: "5px" }}>Send</button>
-        </form>
-      </section>
-
-      <footer style={{ textAlign: "center", color: "#888", fontSize: "0.9rem" }}>
-        © 2025 Andrew. Built with React.
+      <footer className="bg-white text-center text-sm text-gray-500 py-4">
+        © 2025 Leul Ejigu. All rights reserved.
       </footer>
     </div>
   );
 }
+
