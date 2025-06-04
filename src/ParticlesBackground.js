@@ -2,7 +2,7 @@ import React from "react";
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
 
-export default function ParticlesBackground() {
+const ParticlesBackground = () => {
   const particlesInit = async (main) => {
     await loadFull(main);
   };
@@ -13,35 +13,64 @@ export default function ParticlesBackground() {
       init={particlesInit}
       options={{
         fullScreen: { enable: false },
-        background: { color: "#f3f4f6" },
+        background: { color: "#ffffff" },
+        fpsLimit: 60,
         particles: {
-          number: { value: 50 },
-          color: { value: "#a1a1aa" },
-          shape: { type: "circle" },
-          opacity: { value: 0.2 },
-          size: { value: { min: 1, max: 3 } },
-          move: { enable: true, speed: 0.6 },
+          number: {
+            value: 50,
+            density: {
+              enable: true,
+              area: 800,
+            },
+          },
+          color: {
+            value: "#000000",
+          },
+          shape: {
+            type: "circle",
+          },
+          opacity: {
+            value: 1,
+          },
+          size: {
+            value: 8,
+          },
+          move: {
+            enable: true,
+            speed: 2,
+            direction: "none",
+            outMode: "bounce",
+          },
         },
         interactivity: {
           events: {
-            onHover: { enable: true, mode: "repulse" },
+            onHover: {
+              enable: true,
+              mode: "repulse",
+            },
             resize: true,
           },
           modes: {
-            repulse: { distance: 60, duration: 0.4 },
+            repulse: {
+              distance: 100,
+              duration: 0.4,
+            },
           },
         },
         detectRetina: true,
       }}
       style={{
-        position: "absolute",
+        position: "fixed",
         top: 0,
         left: 0,
-        zIndex: -1,
         width: "100%",
         height: "100%",
+        zIndex: 0,
+        background: "#f3f4f6",
+        border: "2px dashed red",
       }}
     />
   );
-}
+};
 
+export default ParticlesBackground;
